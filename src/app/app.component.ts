@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Code Step by step';
-  name = 'Aarushi'
+  name = 'Aarushi Dushman'
 
   // hello(){
   //   let x=10;
