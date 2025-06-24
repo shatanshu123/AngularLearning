@@ -15,9 +15,12 @@ export class AppComponent {
   title = 'Code Step by step';
   name = 'Aarushi Dushman'
 
-  // hello(){
-  //   let x=10;
-  //   const y=20;
-  //   var data=5;
-  // }
+  handleClickEvent(){
+    console.log("Function Called")
+    this.otherFunction()
+  }
+
+  otherFunction(){
+    console.log("Other Function Called")
+  }
 }
