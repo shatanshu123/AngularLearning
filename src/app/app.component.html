@@ -1,7 +1,9 @@
-<h3>Hello</h3>
-<h2>{{title}}</h2>
-<h3>{{name}}</h3>
-<login></login>
-<app-sign-up></app-sign-up>
-<app-profile></app-profile>
-<button (click)="handleClickEvent()">Click Me</button>
+<h1>Counter App</h1>
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div>
+        <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+        <button (click)="handleCounter('reset')"  class="btn bg-black">Reset</button>
+        <button (click)="handleCounter('plus')" class="btn bg-green">Increment</button>
+    </div>
+</div>
