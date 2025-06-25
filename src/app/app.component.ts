@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from "./login/login.component";
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { log } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Code Step by step';
-  name = 'Aarushi Dushman'
-
+  
   handleClickEvent(){
     console.log("Function Called")
     this.otherFunction()
@@ -22,5 +21,40 @@ export class AppComponent {
 
   otherFunction(){
     console.log("Other Function Called")
+  }
+  name:String="Aarushi Dushman"
+  data:String|number = "Aarushi Dushman"
+  
+  updateFunction(){
+    this.data=2136767
+    console.log(this.name);
+    console.log(this.data)
+  }
+  sum(a:number,b:number){
+    console.log(a+b)
+  }
+  count =0;
+  handleI(){
+    this.count=this.count+1
+  }
+  handleD(){
+    
+    this.count=this.count-1
+  }
+  handleR(){
+    
+    this.count=0
+  }
+  handleCounter(value:string){
+    if(value=='minus'){
+      this.count=this.count-1
+
+    }else if(value=='plus'){
+      this.count=this.count+1
+
+    }else{
+      this.count=0
+
+    }
   }
 }
