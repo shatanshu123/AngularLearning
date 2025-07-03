@@ -47,7 +47,12 @@ export class AppComponent {
   }
   handleCounter(value:string){
     if(value=='minus'){
+      if(this.count<=0){
+         alert("Value cannot be less than zero")
+         this.count=0
+      }else{
       this.count=this.count-1
+      }
 
     }else if(value=='plus'){
       this.count=this.count+1
