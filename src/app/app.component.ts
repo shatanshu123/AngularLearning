@@ -24,7 +24,8 @@ export class AppComponent {
   }
   name:String="Aarushi Dushman"
   data:String|number = "Aarushi Dushman"
-  
+  name1:string="Aarushi Singh Bhilware "
+
   updateFunction(){
     this.data=2136767
     console.log(this.name);
