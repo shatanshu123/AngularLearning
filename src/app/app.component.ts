@@ -14,53 +14,20 @@ import { log } from 'console';
 })
 export class AppComponent {
   
-  handleClickEvent(){
+  handleClickEvent(event:MouseEvent){
+    console.log("Function Called",event.type)
+    console.log("Function Called",event.target)
+
+  }
+  handleClickEventValue(event:Event){
+    console.log("Function Called",(event.target as HTMLInputElement).value)
+    //console.log("Function Called",event.target)
+
+  }
+  handleClickEventValue1(){
     console.log("Function Called")
-    this.otherFunction()
-  }
+    //console.log("Function Called",event.target)
 
-  otherFunction(){
-    console.log("Other Function Called")
   }
-  name:String="Aarushi Dushman"
-  data:String|number = "Aarushi Dushman"
-  name1:string="Aarushi Singh Bhilware "
-
-  updateFunction(){
-    this.data=2136767
-    console.log(this.name);
-    console.log(this.data)
-  }
-  sum(a:number,b:number){
-    console.log(a+b)
-  }
-  count =0;
-  handleI(){
-    this.count=this.count+1
-  }
-  handleD(){
-    
-    this.count=this.count-1
-  }
-  handleR(){
-    
-    this.count=0
-  }
-  handleCounter(value:string){
-    if(value=='minus'){
-      if(this.count<=0){
-         alert("Value cannot be less than zero")
-         this.count=0
-      }else{
-      this.count=this.count-1
-      }
-
-    }else if(value=='plus'){
-      this.count=this.count+1
-
-    }else{
-      this.count=0
-
-    }
-  }
+  
 }

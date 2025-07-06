@@ -1,11 +1,19 @@
-<h1>Counter App</h1>
-<div style="text-align: center;">
-    <h2 class="count">{{count}}</h2>
-    <div>
-        <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
-        <button (click)="handleCounter('reset')"  class="btn bg-black">Reset</button>
-        <button (click)="handleCounter('plus')" class="btn bg-green">Increment</button>
-        //changes
-    </div>
+<h1>Event Handling</h1>
+<button class="btn" name="login"(click)="handleClickEvent($event)">Click me</button>
+<br>
+<br>
+<div 
+(mouseenter)="handleClickEvent($event)"
+style="background-color:green; width:100px; height:100px">
 </div>
-//change
+<br>
+<div 
+(mouseleave)="handleClickEvent($event)"
+style="background-color:blue; width:100px; height:100px">
+</div>
+<br>
+<br>
+<input 
+(focus)="handleClickEventValue1()"
+(input)="handleClickEventValue($event)"
+type="text" name=""user>
