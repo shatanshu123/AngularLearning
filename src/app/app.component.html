@@ -1,19 +1,7 @@
-<h1>Event Handling</h1>
-<button class="btn" name="login"(click)="handleClickEvent($event)">Click me</button>
+<h1>Get and Set value</h1>
+<h1>UserName is : {{displayName}}</h1>
+<input type="text" value = {{name}} (input)="getName($event)" placeholder="Enter your text here">
 <br>
 <br>
-<div 
-(mouseenter)="handleClickEvent($event)"
-style="background-color:green; width:100px; height:100px">
-</div>
-<br>
-<div 
-(mouseleave)="handleClickEvent($event)"
-style="background-color:blue; width:100px; height:100px">
-</div>
-<br>
-<br>
-<input 
-(focus)="handleClickEventValue1()"
-(input)="handleClickEventValue($event)"
-type="text" name=""user>
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>

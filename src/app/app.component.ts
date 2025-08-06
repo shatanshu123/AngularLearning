@@ -8,26 +8,24 @@ import { log } from 'console';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, SignUpComponent,ProfileComponent],
+  
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
-  handleClickEvent(event:MouseEvent){
-    console.log("Function Called",event.type)
-    console.log("Function Called",event.target)
 
+  name=""
+  displayName = ""
+  getName(event:Event){
+    const name = (event.target as HTMLInputElement).value
+    console.log(name)
+    this.name=name;
   }
-  handleClickEventValue(event:Event){
-    console.log("Function Called",(event.target as HTMLInputElement).value)
-    //console.log("Function Called",event.target)
-
+  showName(){
+    this.displayName = this.name;
   }
-  handleClickEventValue1(){
-    console.log("Function Called")
-    //console.log("Function Called",event.target)
-
+  setName(){
+    this.name = "sam";
   }
   
 }
